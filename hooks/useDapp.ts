@@ -85,13 +85,13 @@ const useDapp = () => {
         programId
       );
     try {
-      const counterAccount = await program.account.counter.fetch(counter);
+      const counterAccount: any = await program.account.counter.fetch(counter);
 
-      setDataCounter(counterAccount.count?.toString());
+      setDataCounter(counterAccount?.count?.toString());
 
       console.log(
         "Your transaction signature",
-        counterAccount.count?.toString()
+        counterAccount?.count?.toString()
       );
     } catch (err) {
       console.log(err);
